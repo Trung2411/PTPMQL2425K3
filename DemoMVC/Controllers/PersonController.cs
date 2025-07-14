@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace MvcMovie.Controllers
+namespace DemoMVCMovie.Controllers
 {
     public class PersonController : Controller
     {

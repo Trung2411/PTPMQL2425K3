@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DemoMVC.Models
 {
-    [Table ("person")]
+    [Table("person")]
     public class Person
-    
+
     {
         [Key]
         public string? PersonId { get; set; }
