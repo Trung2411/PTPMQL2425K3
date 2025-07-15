@@ -3,12 +3,17 @@ using DemoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using DemoMVC.Models.Process;
+using NuGet.Common;
 
 namespace DemoMVCMovie.Controllers
 {
     public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private ExcelProcess _excelProcess = new ExcelProcess();
+        private IFormFile menu;
+
         public PersonController(ApplicationDbContext context)
         {
             _context = context;
@@ -120,7 +125,35 @@ namespace DemoMVCMovie.Controllers
         {
             return (_context.Person?.Any(e => e.PersonId == id)).GetValueOrDefault();
         }
+        public async Task<IActionResult> upload()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            if (file != menu)
+            {
+                string fileExtension = Path.GetExtension(file.FileName);
+                if (fileExtension != ".xls" && fileExtension != ".xlsx")
+                {
+                    ModelState.AddModelError("", "please choose excel file to upload");
+                }
+                else
+                {
+                    var filename = DateTime.Now.ToShortDateString() + fileExtension;
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory() + "Uploads/Excel", filename);
+                    var filelocation = new FileInfo(filePath).ToString();
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
 
+                }
+            }
+            return View();
+        }
 
     }
 }   
