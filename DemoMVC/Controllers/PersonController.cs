@@ -148,6 +148,20 @@ namespace DemoMVCMovie.Controllers
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await file.CopyToAsync(stream);
+                        var dt = _excelProcess.ExcelToDataTable(fileLocation);
+
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            Person ps = new Person();
+
+                            ps.PersonId = dt.Rows[i][0].ToString();
+                            ps.Fullname = dt.Rows[i][1].ToString();
+                            ps.Address = dt.Rows[i][2].ToString();
+
+                            _context.Add(ps);
+                        }
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
                     }
 
                 }
