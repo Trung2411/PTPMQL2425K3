@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hoang Viet Trung</h1>
+
+<p>2211051228</p>
+
+<form action="/action_page.php" id="form1">
+  <label for="fname">ten:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname" form="form1">
+
+</body>
+</html>
