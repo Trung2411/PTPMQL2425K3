@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PTPMQLK3\\DemoMVC\\DemoMVC.csproj": {}
+    "C:\\PTPMQLK3\\PTPMQL2425K3\\DemoMVC\\DemoMVC.csproj": {}
   },
   "projects": {
-    "D:\\PTPMQLK3\\DemoMVC\\DemoMVC.csproj": {
+    "C:\\PTPMQLK3\\PTPMQL2425K3\\DemoMVC\\DemoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PTPMQLK3\\DemoMVC\\DemoMVC.csproj",
+        "projectUniqueName": "C:\\PTPMQLK3\\PTPMQL2425K3\\DemoMVC\\DemoMVC.csproj",
         "projectName": "DemoMVC",
-        "projectPath": "D:\\PTPMQLK3\\DemoMVC\\DemoMVC.csproj",
-        "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
-        "outputPath": "D:\\PTPMQLK3\\DemoMVC\\obj\\",
+        "projectPath": "C:\\PTPMQLK3\\PTPMQL2425K3\\DemoMVC\\DemoMVC.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\PTPMQLK3\\PTPMQL2425K3\\DemoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

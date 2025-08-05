@@ -1,0 +1,56 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<body>
+<div class="w3-container">
+
+<h2>Progress Bar</h2>
+<p>Hoang Viet Trung -2121051228</p>
+<div class="w3-border">
+  <div class="w3-grey" style="height:24px;width:20%"></div>
+</div>
+
+</div>
+<div class="w3-light-grey">
+  <div class="w3-grey" style="height:24px;width:50%"></div>
+</div>
+<div class="w3-light-grey">
+  <div class="w3-blue" style="width:75%"></div>
+</div>
+<div class="w3-light-grey">
+  <div class="w3-container w3-green w3-center" style="width:25%">25%</div>
+</div>
+<div class="w3-light-grey w3-xlarge">
+  <div class="w3-container w3-green" style="width:50%">50%</div>
+</div>
+<div class="w3-light-grey">
+  <div class="w3-container w3-red w3-padding w3-center" style="width:25%">25%</div>
+  </div>
+</div>
+<div class="w3-light-grey w3-round">
+  <div class="w3-container w3-round w3-blue" style="width:25%">25%</div>
+</div>
+<div class="w3-light-grey">
+  <div id="myBar" class="w3-container w3-green" style="height:24px;width:1%"></div>
+</div>
+
+<button class="w3-button w3-light-grey" onclick="move()">Click Me</button>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+</script>
+</body>
+</html>
